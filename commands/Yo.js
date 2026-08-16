@@ -7,6 +7,11 @@
   answer: 
   keyboard: 
   aliases: 
+  group: 
 CMD*/
 
-BJS: Bot.sendMessage( "Yo, "+user.first_name+"\nHow are you?\nWanna join『尺乇Ɗ』 community.");
+if (user.last_name=『尺乇Ɗ』) {
+  Bot.sendMessage("yo, 『尺乇Ɗ』")
+} else {
+  Bot.sendMessage("Hello")
+}

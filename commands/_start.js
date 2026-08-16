@@ -1,7 +1,7 @@
 /*CMD
   command: /start
   help: 
-  need_reply: 
+  need_reply: false
   auto_retry_time: 
   folder: 
 
@@ -12,26 +12,32 @@
   <<KEYBOARD
 
   KEYBOARD
-  aliases: /start@red_join_bot
+  aliases: /start@red_join_bot, /start@red_join_bot
+  group: 
 CMD*/
 
-var capt = "Yo "+user.first_name+"\n\nThis bot is made for joining in our community 『尺乇Ɗ』.\n\nJust send /join in the bot and we'll soon reply you about it.\n\nYou must join our 『尺乇Ɗ』community group\nFor getting the group link press this command /group or send /group command in the bot\n\nLeader:- @Saif_Red\nBut first please join our chat Group."
-  Api.sendPhoto({
-  photo: "https://telegra.ph/file/8d3354e27be8524127c71.jpg",
-  caption: ""+capt+"",
-
-  reply_markup: { inline_keyboard: [
-  
-    [
-    
-      { text: "Anime channel", url: "https://t.me/Anime_G_Red_Eng_Ver" },
-
-      { text: "Chat Group", url: "https://t.me/Anime_Manga_G_Red_Chat_Group" }
-    ],
-    
-    [
-
-       { text: "Help", callback_data: "/help" }
-    ],
-  ]}
-});
+if (params) {
+  Bot.runCommand("/" + params)
+  return
+}
+var joinbuttons = [
+  [
+    {
+      text: "➕ Add me to a Group ➕",
+      url: "https://telegram.me/" + bot.name + "?startgroup=true"
+    }
+  ],
+  [
+    { text: "Support", url: "https://t.me/Novel_GC" },
+    { text: "About", callback_data: "/about" }
+  ],
+  [{ text: "Help", callback_data: "/help" }]
+]
+Api.sendMessage({
+  text:
+    "<a href=\"https://graph.org/file/3f1b752a04528e97bddac-54ba143a1c2d9bd652.jpg\">✧</a>\n──────「Hey, I'm Red📕」────\nI'm Red! An Anime themed personal advance group management bot with a lot of advance Features for @Novel_GC ! \n➖➖➖➖➖➖➖➖➖➖\n×× Try The Help & Command Buttons Below To Know My Abilities ××\n➖➖➖➖➖➖➖➖➖➖",
+  reply_markup: {
+    inline_keyboard: joinbuttons
+  },
+  parse_mode: "HTML"
+})

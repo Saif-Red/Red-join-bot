@@ -7,5 +7,6 @@
   answer: Well, this bot also does chatting
   keyboard: 
   aliases: chat, chatting, chatting
+  group: 
 CMD*/
 

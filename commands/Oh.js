@@ -11,5 +11,6 @@ Cuz' It's just a bot🤣🤣
   ANSWER
   keyboard: 
   aliases: ohh, ohhh, ohhhh, ohhhhh, ooh, oooh, oooh, oooooh, ohh, ohhh, ohhhh, ohhhhh, ooh, oooh, ooooh, oooooh
+  group: 
 CMD*/
 

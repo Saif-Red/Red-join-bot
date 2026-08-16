@@ -1,5 +1,5 @@
 /*CMD
-  command: Hello
+  command: /clear
   help: 
   need_reply: false
   auto_retry_time: 
@@ -12,8 +12,8 @@
   <<KEYBOARD
 
   KEYBOARD
-  aliases: hello
+  aliases: 
   group: 
 CMD*/
 
-if(user.telegramid = 1335676406){Bot.sendMessage("Hello Sir")}else{Bot.sendMessage("Yo")}
+Bot.clearCache("/info")
